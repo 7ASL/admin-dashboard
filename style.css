@@ -7,12 +7,32 @@
     font-display: swap;
 }
 
+:root {
+    --bg-color: #F8F9FB;
+    --surface-color: #FFFFFF;
+    --text-main: #1B1F28;
+    --primary-color: #4E4CC8;
+
+    --text-secondary: #5A606C;
+    --text-muted: #7E848F;
+
+    --border-color: #E2E4EA;
+    --primary-tint: #E7E9F9;
+}
+
 *, *::before, *::after {
     font-family: "Inter", sans-serif;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 100%;
+}
+
 body {
+    color: var(--text-main);
+    font-size: 1rem;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
 }
@@ -23,7 +43,7 @@ body {
 
     display: grid;
     grid-template-columns: clamp(200px, 15%, 350px) 2fr clamp(300px, 25%, 500px);
-    grid-template-rows: clamp(50px, 8%, 150px) clamp(75px, 12%, 200px) 1fr;
+    grid-template-rows: clamp(50px, 5%, 100px) clamp(75px, 8%, 150px) 1fr;
 }
 
 .col2 {
@@ -41,3 +61,52 @@ body {
 .row3 {
     grid-row-end: span 3;
 }
+
+/* Sidebar */
+/* Would preffer flexbox, but it's CSS Grid Project */
+#sidebar {
+    padding: 1rem;
+    border-right: 1px solid var(--border-color);
+}
+
+#sidebar a {
+    color: var(--text-main);
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    justify-items: start;
+    align-items: center;
+}
+
+a#logo {
+    margin-bottom: 0.5rem;
+    grid-gap: 1rem;
+    padding: 0.6rem;
+
+}
+
+#logo img {
+    width: 2rem;
+}
+
+#logo span {
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+a.nav-item {
+    grid-gap: 0.6rem;
+    padding: 0.4rem 0.6rem;
+
+}
+
+.nav-item img {
+    width: 1.1rem;
+    place-self: center;
+}
+
+.nav-item span {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
