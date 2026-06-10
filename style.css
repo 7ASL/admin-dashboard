@@ -7,6 +7,37 @@
     font-display: swap;
 }
 
-h1{
+*, *::before, *::after {
     font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: clamp(200px, 15%, 350px) 2fr clamp(300px, 25%, 500px);
+    grid-template-rows: clamp(50px, 8%, 150px) clamp(75px, 12%, 200px) 1fr;
+}
+
+.col2 {
+    grid-column-end: span 2;
+}
+
+.col3 {
+    grid-column-end: span 3;
+}
+
+.row2 {
+    grid-row-end: span 2;
+}
+
+.row3 {
+    grid-row-end: span 3;
 }
