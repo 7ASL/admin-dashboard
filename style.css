@@ -85,7 +85,7 @@ a#logo {
 
 }
 
-#logo img {
+#logo svg {
     width: 2rem;
 }
 
@@ -95,18 +95,32 @@ a#logo {
 }
 
 a.nav-item {
-    grid-gap: 0.6rem;
+    grid-gap: 0.2rem;
     padding: 0.4rem 0.6rem;
 
 }
 
-.nav-item img {
-    width: 1.1rem;
-    place-self: center;
+.nav-item svg {
+    width: 0.85rem;
+    height: 0.85rem;
+    align-self: center;
 }
 
 .nav-item span {
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
 }
 
+.nav-item.selected {
+    background-color: #E7E9F9;
+    border-radius: 10px;
+}
+
+.nav-item.selected span {
+    color:var(--primary-color);
+    font-weight: bold;
+}
+
+.nav-item.selected svg {
+    color: var(--primary-color);
+}
