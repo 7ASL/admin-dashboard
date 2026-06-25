@@ -261,3 +261,31 @@ a.nav-item {
     line-height: 3rem;
     font-size: 1.2rem;
 }
+
+/* Action Buttons */
+#action-buttons {
+    align-content: center;
+    gap: 0.8rem;
+}
+
+#action-buttons > button {
+    padding: 0.5rem 0.75rem;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+#action-buttons > button:hover {
+    border-color: var(--text-muted);
+}
+
+#action-buttons > button > svg {
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-right: 0.4rem;
+}
+
+#action-buttons > button.highlight {
+    background-color: var(--primary-color);
+    color: white;
+}
