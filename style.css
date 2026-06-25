@@ -8,7 +8,7 @@
 }
 
 :root {
-    --bg-color: #F8F9FB;
+    --bg-color: #F5F7F9;
     --surface-color: #FFFFFF;
     --text-main: #1B1F28;
     --primary-color: #4E4CC8;
@@ -61,6 +61,11 @@ body {
 
 .row3 {
     grid-row-end: span 3;
+}
+
+.grid-column {
+    display: grid;
+    grid-auto-flow: column;
 }
 
 /* Sidebar */
@@ -179,8 +184,6 @@ a.nav-item {
 
 /* User Controls */
 #user-controls {
-    display: grid;
-    grid-auto-flow: column;
     align-content: center;
     justify-content: end;
     padding-right: 1.5rem;
@@ -198,25 +201,63 @@ a.nav-item {
 }
 
 #user-badge {
-    display: grid;
-    grid-auto-flow: column;
     align-content: center;
     gap: 0.7rem;
 }
 
-#user-image {
-    width: 2rem;
-    height: 2rem;
+.user-image {
     background-color: #4E4CC8;
     color: #FFFFFF;
     border-radius: 50%;
     border: none;
     text-align: center;
+    font-weight: 600;
+}
+
+.img-small {
+    width: 2rem;
+    height: 2rem;
     line-height: 2rem;
     font-size: 0.8rem;
-    font-weight: 500;
 }
 
 #user-name {
     line-height: 2rem;
+    font-weight: 500;
+}
+
+/* Header */
+#header {
+    background-color: var(--bg-color);
+    justify-content: space-between;
+    align-content: center;
+    padding: 1rem;
+}
+
+#welcome-banner {
+    gap: 0.8rem;
+}
+
+#welcome-info > span {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+#welcome-info > div {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.2rem;
+}
+
+#welcome-info #user-tag {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.img-large {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.2rem;
 }
