@@ -197,14 +197,14 @@ a.nav-item {
     height: 1.1rem;
 }
 
-#profile {
+#user-badge {
     display: grid;
     grid-auto-flow: column;
     align-content: center;
     gap: 0.7rem;
 }
 
-#profile-image {
+#user-image {
     width: 2rem;
     height: 2rem;
     background-color: #4E4CC8;
@@ -217,6 +217,6 @@ a.nav-item {
     font-weight: 500;
 }
 
-#profile-name {
+#user-name {
     line-height: 2rem;
 }
