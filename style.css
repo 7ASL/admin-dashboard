@@ -98,8 +98,18 @@ a#logo {
 
 }
 
-#logo svg {
-    width: 2rem;
+#logo #brand-logo {
+    background-color: #4E4CC8;
+    color: #FFFFFF;
+    border-radius: 35%;
+    border: none;
+    text-align: center;
+    font-weight: 600;
+    align-self: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.4rem;
 }
 
 #logo span {
