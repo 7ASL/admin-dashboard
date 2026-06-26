@@ -19,6 +19,13 @@
     --border-color: #E2E4EA;
     --track-color: #E8EAEE;
     --primary-tint: #E7E9F9;
+
+    /* status badges (bg / text) */
+    --status-progress-bg: #E7E8FA;  --status-progress-fg: #4543AE;
+    --status-ontrack-bg: #DFF5EA;   --status-ontrack-fg: #0B7A57;
+    --status-review-bg: #FAF0D7;    --status-review-fg: #8A6516;
+    --status-risk-bg: #FCEAE7;      --status-risk-fg: #B2433C;
+    --status-risk-bar: #D25549;
 }
 
 *, *::before, *::after {
@@ -302,11 +309,14 @@ a.nav-item {
     font-weight: bold;
 }
 
-.important-box {
+.content-box {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     background-color: var(--surface-color);
     padding: 1rem;
+}
+
+.important-margin {
     margin-top: 0.6rem;
     margin-bottom: 0.8rem;
 }
@@ -317,17 +327,12 @@ a.nav-item {
 
 .important-title {
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 .important-extra {
     font-size: 0.9rem;
     color: var(--text-muted);
-}
-
-.announcement > span {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
 }
 
 .trending {
@@ -351,4 +356,102 @@ a.nav-item {
 
 .s-small {
     margin: 0.6rem 0rem;
+}
+
+/* Projects */
+
+#projects {
+    background-color: var(--bg-color);
+    padding: 0rem 1rem;
+}
+
+h4, h3, h2, h1 {
+    margin: 0;
+}
+
+#projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 12rem;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.grid-project {
+    display: grid;
+    grid-auto-rows: auto;
+    row-gap: 0.8rem;
+    align-items: start;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.status {
+    font-size: 0.8rem;
+    border-radius: 20px;
+    padding: 0.2rem 0.6rem;
+    font-weight: bold;
+    height: 1.6rem;
+    line-height: 1.4;
+}
+
+.on-track {
+    color: var(--status-ontrack-fg);
+    background-color: var(--status-ontrack-bg);
+}
+
+.in-review {
+    color: var(--status-review-fg);
+    background-color: var(--status-review-bg);
+}
+
+.in-progress {
+    color: var(--status-progress-fg);
+    background-color: var(--status-progress-bg);
+}
+
+.track {
+    height: 5px; 
+    background-color: var(--status-progress-bg);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background-color: var(--status-progress-fg);
+    border-radius: 999px;
+}
+
+.progress {
+    gap: 0.8rem;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.progress-value {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--text-secondary);
+}
+
+.project-stats {
+    color: var(--text-secondary);
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project-stats-item {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+    align-items: center;
 }
