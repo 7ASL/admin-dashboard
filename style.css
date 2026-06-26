@@ -455,3 +455,26 @@ h4, h3, h2, h1 {
     gap: 0.5rem;
     align-items: center;
 }
+
+/* Featured Project */
+.featured-project {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10%;
+}
+
+.featured-status {
+    display: grid;
+    gap: 0.4rem;
+    align-self: center;
+}
+
+.featured-completion {
+    justify-content: start;
+    align-items: end;
+    gap: 0.6rem;
+}
+
+.featured-completion > h1 {
+    line-height: 2.4rem;
+}
