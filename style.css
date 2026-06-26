@@ -444,9 +444,17 @@ h4, h3, h2, h1 {
 
 .project-stats {
     color: var(--text-secondary);
-    justify-content: end;
     align-items: center;
     gap: 1rem;
+}
+
+.end {
+    justify-content: end;
+}
+
+.start {
+    justify-content: start;
+
 }
 
 .project-stats-item {
@@ -477,4 +485,26 @@ h4, h3, h2, h1 {
 
 .featured-completion > h1 {
     line-height: 2.4rem;
+}
+
+.featured-info {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.featured-tags {
+    justify-content: start;
+    align-content: center;
+    gap: 0.8rem;
+}
+
+.featured {
+    font-size: 0.8rem;
+    border-radius: 5px;
+    padding: 0.2rem 0.6rem;
+    font-weight: bolder;
+    height: 1.6rem;
+    line-height: 1.4;
+    color: white;
+    background-color: var(--status-progress-fg);
 }
